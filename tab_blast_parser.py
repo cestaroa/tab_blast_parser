@@ -104,6 +104,7 @@ filter_field = { 'evalue':0.001,
                   'alignment length': 30,
                 }
 #
+#
 #input params
 parser = argparse.ArgumentParser(description='Simple parser for blast results in tab format.')
 parser.add_argument("blast", type=str, help="tabular blast file")
