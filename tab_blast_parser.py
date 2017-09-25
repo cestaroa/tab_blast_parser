@@ -56,16 +56,6 @@ def filter_by_field() :
                     if h[f]<filter_field[f] :
                         h['filter']=True
 #
-def get_ratio() :
-    for qid in blast_by_query :
-        for h in blast_by_query[qid] :
-            f1=h['alignment length']/h['query length']
-            f2=h['alignment length']/h['subject length']
-            f3=h['query length']/h['subject length']
-            h['alignment/query']=round(f1,3)
-            h['subject/query']=round(f2,3)
-            h['query/subject']=round(f3,3)
-#
 def sort_by(my_field_name,my_hsp_ary) :
     tmp=[]
     to_return=[]
@@ -100,7 +90,7 @@ def print_by_query() :
 #general params
 #default fields of tabular format
 tab_field=['query id','subject id','identity','alignment length','mismatches','gaps','q. start','q. end','s. start','s. end','evalue','bit score']
-filter_field = { 'evalue':0.001,
+filter_field = { 'evalue':0.01,
                   'identity':30.0,
                   'alignment length': 30,
                 }
