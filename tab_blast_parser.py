@@ -5,6 +5,7 @@ import re
 import argparse
 #
 #tabular blast, give back a dictionary with query_id as key and an array of dicts
+#
 def build_by_field(my_file,tab_field) :
     by_query={}
     blast_file=open(my_file)
